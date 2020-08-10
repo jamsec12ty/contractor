@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-08-10
+  time: 2020-08-10 12:11:45
+  location: MyString
+  incident_type: MyString
+  incident_details: MyString
+  poi_details: MyString
+  witness_details: MyString
+  reported_to: MyString
+  reported_by: MyString
+  followup_actions: MyString
+
+two:
+  date: 2020-08-10
+  time: 2020-08-10 12:11:45
+  location: MyString
+  incident_type: MyString
+  incident_details: MyString
+  poi_details: MyString
+  witness_details: MyString
+  reported_to: MyString
+  reported_by: MyString
+  followup_actions: MyString

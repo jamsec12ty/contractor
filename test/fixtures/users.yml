@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  age: 1
+  dob: 2020-08-10
+  address: MyString
+  phone: MyString
+  email: MyString
+  emergencyn: MyString
+  emergencyph: MyString
+  driverlicno: MyString
+  dlcurrent: false
+  seclicno: MyString
+  seclicexp: 2020-08-10
+  rsano: MyString
+  rsaexp: 2020-08-10
+  firstaidexp: 2020-08-10
+
+two:
+  name: MyString
+  age: 1
+  dob: 2020-08-10
+  address: MyString
+  phone: MyString
+  email: MyString
+  emergencyn: MyString
+  emergencyph: MyString
+  driverlicno: MyString
+  dlcurrent: false
+  seclicno: MyString
+  seclicexp: 2020-08-10
+  rsano: MyString
+  rsaexp: 2020-08-10
+  firstaidexp: 2020-08-10
