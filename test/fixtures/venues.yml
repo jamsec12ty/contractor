@@ -4,10 +4,10 @@ one:
   name: MyString
   address: MyString
   phone: MyString
-  licenseename: MyString
+  licensee_name: MyString
 
 two:
   name: MyString
   address: MyString
   phone: MyString
-  licenseename: MyString
+  licensee_name: MyString

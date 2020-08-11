@@ -7,15 +7,15 @@ one:
   address: MyString
   phone: MyString
   email: MyString
-  emergencyn: MyString
-  emergencyph: MyString
-  driverlicno: MyString
-  dlcurrent: false
-  seclicno: MyString
-  seclicexp: 2020-08-10
-  rsano: MyString
-  rsaexp: 2020-08-10
-  firstaidexp: 2020-08-10
+  emergency_contact_name: MyString
+  emergency_contact_phone: MyString
+  driver_lic_no: MyString
+  driver_lic_current: false
+  sec_lic_no: MyString
+  sec_lic_exp: 2020-08-10
+  rsa_no: MyString
+  rsa_exp: 2020-08-10
+  first_aid_exp: 2020-08-10
 
 two:
   name: MyString
@@ -24,12 +24,12 @@ two:
   address: MyString
   phone: MyString
   email: MyString
-  emergencyn: MyString
-  emergencyph: MyString
-  driverlicno: MyString
-  dlcurrent: false
-  seclicno: MyString
-  seclicexp: 2020-08-10
-  rsano: MyString
-  rsaexp: 2020-08-10
-  firstaidexp: 2020-08-10
+  emergency_contact_name: MyString
+  emergency_contact_phone: MyString
+  driver_lic_no: MyString
+  driver_lic_current: false
+  sec_lic_no: MyString
+  sec_lic_exp: 2020-08-10
+  rsa_no: MyString
+  rsa_exp: 2020-08-10
+  first_aid_exp: 2020-08-10

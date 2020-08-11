@@ -4,7 +4,7 @@ class CreateVenues < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :address
       t.string :phone
-      t.string :licenseename
+      t.string :licensee_name
 
       t.timestamps
     end

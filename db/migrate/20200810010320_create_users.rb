@@ -7,15 +7,15 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :address
       t.string :phone
       t.string :email
-      t.string :emergencyn
-      t.string :emergencyph
-      t.string :driverlicno
-      t.boolean :dlcurrent
-      t.string :seclicno
-      t.date :seclicexp
-      t.string :rsano
-      t.date :rsaexp
-      t.date :firstaidexp
+      t.string :emergency_contact_name
+      t.string :emergency_contact_phone
+      t.string :driver_lic_no
+      t.boolean :driver_lic_current
+      t.string :sec_lic_no
+      t.date :sec_lic_exp
+      t.string :rsa_no
+      t.date :rsa_exp
+      t.date :first_aid_exp
 
       t.timestamps
     end

@@ -1,8 +1,7 @@
 class CreateIncidents < ActiveRecord::Migration[5.2]
   def change
     create_table :incidents do |t|
-      t.date :date
-      t.time :time
+      t.datetime :date
       t.string :location
       t.string :incident_type
       t.string :incident_details
@@ -10,7 +9,9 @@ class CreateIncidents < ActiveRecord::Migration[5.2]
       t.string :witness_details
       t.string :reported_to
       t.string :reported_by
-      t.string :followup_actions
+      t.string :follow_up_actions
+      t.integer :venue_id
+      t.integer :user_id
 
       t.timestamps
     end
