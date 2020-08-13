@@ -1,0 +1,43 @@
+
+<h3>Edit incident report</h3>
+
+<%= form_for @incident do |f| %>
+  <hr>
+  <br><br>
+  <p>
+    <strong>Date:</strong> <%= @incident.date %>
+  </p>
+  <p>
+    <strong>Location: </strong><%= @incident.location %>
+  </p>
+  <p>
+    <strong>Incident type: </strong><%= @incident.incident_type %>
+  </p>
+  <p>
+    <strong>Incident details: </strong><%= @incident.incident_details %>
+  </p>
+  <p>
+    <strong>POI details: </strong><%= @incident.poi_details %>
+  </p>
+  <p>
+    <strong>Witness: </strong><%= @incident.witness_details %>
+  </p>
+  <p>
+    <strong>Reported to: </strong><%= @incident.reported_to %>
+  </p>
+  <p>
+    <strong>Reported by: </strong><%= @incident.reported_by %>
+  </p>
+  <p>
+    <strong>Follow up: </strong><%= @incident.follow_up_actions %>
+  </p>
+
+    <%= f.label :follow_up_actions, "Follow Up Actions" %>
+    <%= f.text_field :follow_up_actions %>
+  <br><br>
+
+    <%= f.hidden_field :venue_id, value: @venue.id %>
+  <hr>
+    <%= f.submit %>
+
+<% end %>

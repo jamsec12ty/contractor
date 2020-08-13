@@ -1,2 +1,42 @@
-<h2>Users Show Page</h2>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2>Your Profile</h2>
+<hr>
+
+<p>
+<strong>Name:</strong> <%= @user.name %>
+</p>
+<p>
+<strong>Email: </strong><%= @user.email %>
+</p>
+<p>
+<strong>Phone: </strong><%= @user.phone %>
+</p>
+<p>
+<strong>Address: </strong><%= @user.address %>
+</p>
+<p>
+<strong>Driver Lic No: </strong><%= @user.driver_lic_no %>
+</p>
+<p>
+<strong>Driver Lic Status: </strong><%= @user.driver_lic_current %>
+</p>
+<p>
+<strong>Emergency Contact Name: </strong><%= @user.emergency_contact_name %>
+</p>
+<p>
+<strong>Emergency Contact Number: </strong><%= @user.emergency_contact_phone %>
+</p>
+<p>
+<strong>Security Licence Number: </strong><%= @user.sec_lic_no %>
+</p>
+<p>
+<strong>Security Licence Expiry: </strong><%= @user.sec_lic_exp %>
+</p>
+<p>
+<strong>RSA Number: </strong><%= @user.rsa_no %>
+</p>
+<p>
+<strong>RSA Expiry: </strong><%= @user.rsa_exp %>
+</p>
+<p>
+<strong>First Aid Expiry: </strong><%= @user.first_aid_exp %>
+</p>

@@ -12,6 +12,25 @@
   </head>
 
   <body>
+
+    <h2>Contractor!</h2>
+    <nav>
+      <% if @current_user.present? %>
+        Welcome, <%= @current_user.name %>
+        |
+        <%= link_to 'Dashboard', dashboard_path %>
+        |
+        <%= link_to 'Profile', user_path(@current_user) %>
+        |
+        <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
+        |
+        <%= link_to 'Logout', login_path, method: 'delete' %>
+      <% else %>
+        <%= link_to 'Login', login_path %>
+        |
+        <%= link_to 'Create User', new_user_path %>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>

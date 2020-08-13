@@ -1,0 +1,68 @@
+<h1>Venue: <%= @venue.name %></h1>
+
+<h3> Incidents for this venue </h3>
+
+<ul>
+  <% @venue.incidents.each do |i| %>
+
+    <li>
+      <%= link_to i.incident_type, incident_path(i.id) %>
+    </li>
+
+  <% end %>
+</ul>
+
+<h3>Create New incident report</h3>
+
+<% if @incident.errors.full_messages.any? %>
+  <ul>
+    <% @incident.errors.full_messages.each do |e| %>
+    <li><%= e %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @incident do |f| %>
+  <hr>
+  <br><br>
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  <br><br>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  <br><br>
+
+    <%= f.label :incident_type, "Incident type"  %>
+    <%= f.text_field :incident_type %>
+  <br><br>
+
+    <%= f.label :incident_details, "Indicent details" %>
+    <%= f.text_area :incident_details %>
+  <br><br>
+
+    <%= f.label :poi_details, "POI details" %>
+    <%= f.text_field :poi_details %>
+  <br><br>
+
+    <%= f.label :Witness %>
+    <%= f.text_field :witness_details%>
+  <br><br>
+
+    <%= f.label :reported_to, "Reported to" %>
+    <%= f.text_field :reported_to %>
+  <br><br>
+
+    <%= f.label :reported_by, "Reported by" %>
+    <%= f.text_field :reported_by %>
+  <br><br>
+
+    <%= f.label :follow_up_actions, "Follow Up Actions" %>
+    <%= f.text_area :follow_up_actions %>
+  <br><br>
+
+    <%= f.hidden_field :venue_id, value: @venue.id %>
+  <hr>
+    <%= f.submit %>
+
+<% end %>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :users
+
+  root to: 'pages#welcome'
+  get '/home' => 'pages#home'
 
   # Session Routes: ##################
 
@@ -9,4 +11,11 @@ Rails.application.routes.draw do
 
   delete '/login' => 'session#destroy' # Logout, i.e. delete session for this user
 
+  resources :users
+
+  resources :venues
+
+  resources :incidents
+
+  get '/dashboard' => 'users#dashboard'
 end

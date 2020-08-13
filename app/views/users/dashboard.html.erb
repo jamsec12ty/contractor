@@ -1,0 +1,23 @@
+<h1>Dashboard</h1>
+
+
+<% if @current_user.venues.present? %>
+  <h3> Your Venues </h3>
+  <ul>
+    <% @current_user.venues.each do |v| %>
+      <li>
+        <%= link_to v.name, venue_path(v.id) %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <h3> All Venues </h3>
+
+  <ul>
+    <% @venues.each do |v| %>
+      <li>
+        <%= link_to v.name, venue_path(v.id) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

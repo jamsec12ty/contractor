@@ -1,2 +1,59 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h3>Edit Profile</h3>
+
+<%= form_for @user do |f| %>
+  <hr>
+  <p>
+    <strong>Name:</strong> <%= @user.name %>
+  </p>
+  <p>
+    <strong>Email: </strong><%= @user.email %>
+  </p>
+
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  <br><br>
+
+    <%= f.label :address %>
+    <%= f.text_area :address %>
+  <br><br>
+
+    <%= f.label :driver_lic_no, "Driver Lic No." %>
+    <%= f.text_field :driver_lic_no %>
+  <br><br>
+
+    <%= f.label :driver_lic_current, "Driver Lic Current?" %>
+    <%= f.text_field :driver_lic_current %>
+  <br><br>
+  <hr>
+    <%= f.label :emergency_contact_name, "Emergency Contact Name:"  %>
+    <%= f.text_field :emergency_contact_name %>
+  <br><br>
+
+    <%= f.label :emergency_contact_phone, "Emergency Contact Number:" %>
+    <%= f.text_field :emergency_contact_phone %>
+  <br><br>
+  <hr>
+    <%= f.label :sec_lic_no, "Security Licence Number" %>
+    <%= f.text_field :sec_lic_no %>
+  <br><br>
+
+    <%= f.label :sec_lic_exp, "Security Licence Expiry" %>
+    <%= f.text_field :sec_lic_exp %>
+  <br><br>
+
+    <%= f.label :rsa_no, "RSA Number" %>
+    <%= f.text_field :rsa_no %>
+  <br><br>
+
+    <%= f.label :rsa_exp, "RSA Expiry" %>
+    <%= f.text_field :rsa_exp %>
+  <br><br>
+
+    <%= f.label :first_aid_exp, "First Aid Expiry" %>
+    <%= f.text_field :first_aid_exp %>
+  <br><br>
+
+  <hr>
+    <%= f.submit %>
+
+<% end %>
