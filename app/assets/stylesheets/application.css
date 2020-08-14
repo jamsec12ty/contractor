@@ -11,9 +11,10 @@ a{
 nav{
   height: 25px;
   background: rgb(0, 50, 56);
+  padding: 4px;
 }
 
 nav :hover{
-  background: grey
-  
+  background: grey;
+
 }

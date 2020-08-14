@@ -11,8 +11,8 @@ class VenuesController < ApplicationController
   end
 
   def show
-    @venues = Venue.all
     @venue = Venue.find params[:id]
+    @user_incidents = @venue.incidents.where(user_id:@current_user.id)
     @incident = Incident.new
   end
 

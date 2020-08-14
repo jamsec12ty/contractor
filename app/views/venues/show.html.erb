@@ -1,16 +1,19 @@
 <h2>Venue: <%= @venue.name %></h2>
+<% if @user_incidents.any? %>
+  <h3> Incidents for this venue </h3>
 
-<h3> Incidents for this venue </h3>
-
-<ul>
-  <% @venue.incidents.each do |i| %>
+  <ul>
+    <% @user_incidents.each do |i| %>
 
     <li>
       <%= link_to i.incident_type, incident_path(i.id) %>
     </li>
 
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You have not filed an incident for this venue yet.</p>
+<% end %>
 
 <h3>Create New incident report</h3>
 

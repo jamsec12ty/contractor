@@ -14,15 +14,26 @@
 
 <!-- we are not interacting with a model object, so we don't use 'form_for @obj' -->
 <%= form_tag login_path do %>
-
-  <%= label_tag :email %>
-  <%= email_field_tag :email %>
+<table>
+  <tr>
+    <td>
+      <%= label_tag :email %>
+    </td>
+    <td>
+      <%= email_field_tag :email %>
+    </td>
+  </tr>
   <br>
   <br>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <br>
-  <br>
-  <hr>
-  <%= submit_tag 'Login' %>
+    <tr>
+      <td>
+        <%= label_tag :password %>
+      </td>
+      <td>
+        <%= password_field_tag :password %>
+      </td>
+    </tr>
+</table>
+<hr>
+<%= submit_tag 'Login' %>
   <% end %>
