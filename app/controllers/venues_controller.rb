@@ -11,6 +11,7 @@ class VenuesController < ApplicationController
   end
 
   def show
+    @venues = Venue.all
     @venue = Venue.find params[:id]
     @incident = Incident.new
   end

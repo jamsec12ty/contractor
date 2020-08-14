@@ -1,4 +1,4 @@
-<h1>Dashboard</h1>
+<h2>Dashboard</h2>
 
 
 <% if @current_user.venues.present? %>
@@ -11,7 +11,7 @@
     <% end %>
   </ul>
 <% else %>
-  <h3> All Venues </h3>
+  <h3> Select Venue </h3>
 
   <ul>
     <% @venues.each do |v| %>
