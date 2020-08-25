@@ -12,4 +12,14 @@ class Incident < ApplicationRecord
   validates :reported_by, presence: true
   validates :follow_up_actions, presence: true
 
+  def can_edit_all?
+    (Time.now - self.created_at) < 1.hour
+  end
+
+  def can_edit_followup?
+    (Time.now - self.created_at) < 6.hours
+  end
+
+
+
 end

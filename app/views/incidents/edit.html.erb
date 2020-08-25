@@ -4,40 +4,60 @@
 <%= form_for @incident do |f| %>
   <hr>
   <br><br>
-  <p>
-    <strong>Date:</strong> <%= @incident.date %>
-  </p>
-  <p>
-    <strong>Location: </strong><%= @incident.location %>
-  </p>
-  <p>
-    <strong>Incident type: </strong><%= @incident.incident_type %>
-  </p>
-  <p>
-    <strong>Incident details: </strong><%= @incident.incident_details %>
-  </p>
-  <p>
-    <strong>POI details: </strong><%= @incident.poi_details %>
-  </p>
-  <p>
-    <strong>Witness: </strong><%= @incident.witness_details %>
-  </p>
-  <p>
-    <strong>Reported to: </strong><%= @incident.reported_to %>
-  </p>
-  <p>
-    <strong>Reported by: </strong><%= @incident.reported_by %>
-  </p>
-  <p>
-    <strong>Follow up: </strong><%= @incident.follow_up_actions %>
-  </p>
+
+  <% if @incident.can_edit_all? %>
+  <br><br>
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  <br><br>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  <br><br>
+
+    <%= f.label :incident_type, "Incident type"  %>
+    <%= f.text_field :incident_type %>
+  <br><br>
+
+    <%= f.label :incident_details, "Indicent details" %>
+    <%= f.text_area :incident_details %>
+  <br><br>
+
+    <%= f.label :poi_details, "POI details" %>
+    <%= f.text_field :poi_details %>
+  <br><br>
+
+    <%= f.label :Witness %>
+    <%= f.text_field :witness_details%>
+  <br><br>
+
+    <%= f.label :reported_to, "Reported to" %>
+    <%= f.text_field :reported_to %>
+  <br><br>
+
+    <%= f.label :reported_by, "Reported by" %>
+    <%= f.text_field :reported_by %>
+  <br><br>
+
+    <%= f.label :follow_up_actions, "Follow Up Actions" %>
+    <%= f.text_area :follow_up_actions %>
+  <br><br>
+        <%= f.submit %>
+
+  <% elsif @incident.can_edit_followup?%>
 
     <%= f.label :follow_up_actions, "Follow Up Actions" %>
     <%= f.text_field :follow_up_actions %>
-  <br><br>
+    <br><br>
+        <%= f.submit %>
 
-    <%= f.hidden_field :venue_id, value: @venue.id %>
+    <% else %>
+
+      <p>Sorry, you can no longer edit this form.</p>
+
+    <% end %>
+
   <hr>
-    <%= f.submit %>
+
 
 <% end %>

@@ -1,5 +1,9 @@
 <h2>Incident: <%= @incident.incident_type %></h2>
-
+<% if @incident.can_edit_followup? %>
+  <%= link_to "Edit this incident", edit_incident_path(@incident.id) %>
+<% else %>
+  <p>You can no longer edit this incident.</p>
+<% end %>
 <p>
 <strong>Date:</strong> <%= @incident.date %>
 </p>
